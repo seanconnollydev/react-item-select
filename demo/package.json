@@ -1,0 +1,22 @@
+{
+  "name": "react-item-select-demo",
+  "version": "1.0.0",
+  "description": "Demonstrate usage of react-item-select",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goldenshun/react-item-select.git"
+  },
+  "author": "Sean Connolly",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^6.0.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  }
+}
