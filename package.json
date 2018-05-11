@@ -1,0 +1,29 @@
+{
+  "name": "react-item-select",
+  "version": "0.0.1",
+  "description": "A React component that takes away the pain of managing item selection state in tables and lists",
+  "main": "dist/withSelections.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goldenshun/react-item-select.git"
+  },
+  "keywords": [
+    "react",
+    "table",
+    "list",
+    "item",
+    "select",
+    "state",
+    "higher order component",
+    "hoc"
+  ],
+  "author": "Sean Connolly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goldenshun/react-item-select/issues"
+  },
+  "homepage": "https://github.com/goldenshun/react-item-select#readme"
+}
