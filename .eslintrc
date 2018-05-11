@@ -13,6 +13,7 @@
       "ignoreStrings": true,
       "ignoreTemplateLiterals": true
     }],
+    "no-underscore-dangle": "off",
     "react/jsx-filename-extension": "off",
     "react/react-in-jsx-scope": "off",
     "no-use-before-define": [ "error", { "functions": false, "classes": false }]
