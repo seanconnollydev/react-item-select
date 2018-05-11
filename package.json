@@ -25,5 +25,14 @@
   "bugs": {
     "url": "https://github.com/goldenshun/react-item-select/issues"
   },
-  "homepage": "https://github.com/goldenshun/react-item-select#readme"
+  "homepage": "https://github.com/goldenshun/react-item-select#readme",
+  "devDependencies": {
+    "babel-eslint": "8.2.2",
+    "babel-plugin-emotion": "9.1.2",
+    "eslint": "4.19.1",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-plugin-import": "2.10.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-react": "7.7.0",
+  }
 }
