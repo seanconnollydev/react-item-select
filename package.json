@@ -28,11 +28,21 @@
   "homepage": "https://github.com/goldenshun/react-item-select#readme",
   "devDependencies": {
     "babel-eslint": "8.2.2",
-    "babel-plugin-emotion": "9.1.2",
     "eslint": "4.19.1",
     "eslint-config-airbnb": "16.1.0",
     "eslint-plugin-import": "2.10.0",
     "eslint-plugin-jsx-a11y": "6.0.3",
-    "eslint-plugin-react": "7.7.0",
+    "eslint-plugin-react": "7.7.0"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "dependencies": {
+    "hoist-non-react-statics": "^2.5.0",
+    "immutability-helper": "^2.7.0",
+    "lodash.every": "^4.6.0",
+    "lodash.has": "^4.5.2",
+    "lodash.isempty": "^4.4.0",
+    "lodash.size": "^4.2.0"
   }
 }
