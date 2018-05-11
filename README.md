@@ -4,7 +4,5 @@ A React component that takes away the pain of managing item selection state in t
 This project is currently under development.
 
 TODO:
-- Rollup
-- npm publish
 - Demos
 - Docs
