@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import withSelections from 'react-item-select';
-import { Button, Container, Header } from 'semantic-ui-react';
+import { Button, Header } from 'semantic-ui-react';
 import {
   LiveProvider,
   LiveEditor,
@@ -20,12 +21,13 @@ class Example extends React.Component {
   }
 
   render() {
-  // eslint-disable-next-line react/prop-types
-    const { code, scope, title } = this.props;
+    const {
+      code, id, scope, title,
+    } = this.props;
     const { showEditor } = this.state;
 
     return (
-      <Container>
+      <div id={id}>
         <LiveProvider code={code} scope={Object.assign({}, scope, defaultScope)}>
           <div style={{
             display: 'flex',
@@ -43,7 +45,7 @@ class Example extends React.Component {
           <LivePreview />
           <LiveError />
         </LiveProvider>
-      </Container>
+      </div>
     );
   }
 }
