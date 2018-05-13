@@ -1,42 +1,15 @@
 import React from 'react';
-import withSelections from 'react-item-select';
-import {
-  LiveProvider,
-  LiveEditor,
-  LiveError,
-  LivePreview,
-} from 'react-live';
+import Head from 'next/head';
+import Example from '../examples/Example';
+import SimpleList from '../examples/SimpleList';
 
-const code = `
-withSelections((props) => {
-  const { handleSelect, isItemSelected } = props;
-
-  const items = [{id: 1, name: 'One'}, {id: 2, name: 'Two'}, {id: 3, name: 'Three'}];
-
-  return (
-    <div>
-      <ul>
-        {items.map(item => (
-          <li
-            key={item.id}
-            onClick={() => handleSelect(item.id)}
-            style={{ cursor: 'pointer', fontWeight: isItemSelected(item.id) ? 'bold' : 'normal' }}
-          >{item.name}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-});
-`;
-
-const scope = { withSelections };
-const Live = () => (
-  <LiveProvider code={code} scope={scope}>
-    <LivePreview />
-    <LiveEditor />
-    <LiveError />
-  </LiveProvider>
+const Index = () => (
+  <React.Fragment>
+    <Head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" />
+    </Head>
+    <Example title="Simple List" code={SimpleList.code} />
+  </React.Fragment>
 );
 
-export default Live;
+export default Index;
