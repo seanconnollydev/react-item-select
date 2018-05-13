@@ -15,6 +15,7 @@
   "author": "Sean Connolly",
   "license": "MIT",
   "dependencies": {
+    "faker": "^4.1.0",
     "lodash": "^4.17.10",
     "next": "^6.0.0",
     "react": "^16.3.2",

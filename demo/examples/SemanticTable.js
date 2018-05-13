@@ -1,8 +1,16 @@
 import _range from 'lodash/range';
+import faker from 'faker';
 import { Button, Checkbox, Segment, Table } from 'semantic-ui-react';
 
+const members = _range(0, 15).map(i => ({
+  id: i,
+  username: faker.internet.userName(),
+  first: faker.name.firstName(),
+  last: faker.name.lastName(),
+}));
+
 const scope = {
-  _range, Button, Checkbox, Segment, Table,
+  members, Button, Checkbox, Segment, Table,
 };
 
 const code = `
@@ -11,18 +19,11 @@ withSelections((props) => {
       areAllIndeterminate, areAllSelected, areAnySelected, selectedCount, handleClearAll, handleSelect, handleSelectAll, isItemSelected,
     } = props;
 
-  const members = _range(0, 15).map(i => ({
-    id: i,
-    username: \`username_\${i}\`,
-    first: \`first_\${i}\`,
-    last: \`last_\${i}\`,
-  }));
-
   return (
     <div>
       <Segment textAlign="left" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
         <div style={{ visibility: areAnySelected ? 'visible' : 'hidden' }}>
-          <span>{selectedCount} selected</span>
+          <span style={{marginRight: '8px'}}>{selectedCount} selected</span>
           <Button basic onClick={handleClearAll}>Clear</Button>
         </div>
         <div>
