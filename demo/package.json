@@ -18,6 +18,7 @@
     "next": "^6.0.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-item-select": "0.0.1"
+    "react-item-select": "0.0.1",
+    "react-live": "^1.10.1"
   }
 }
