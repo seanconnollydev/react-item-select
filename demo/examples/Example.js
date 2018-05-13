@@ -1,6 +1,6 @@
 import React from 'react';
 import withSelections from 'react-item-select';
-import { Button, Header, Icon } from 'semantic-ui-react';
+import { Button, Container, Header } from 'semantic-ui-react';
 import {
   LiveProvider,
   LiveEditor,
@@ -25,15 +25,25 @@ class Example extends React.Component {
     const { showEditor } = this.state;
 
     return (
-      <LiveProvider code={code} scope={Object.assign({}, scope, defaultScope)}>
-        <Header size="large">{title}</Header>
-        <LivePreview />
-        <Button onClick={this.toggleEditor} icon labelPosition="right" size="tiny">
-          Edit<Icon name="caret down" />
-        </Button>
-        {showEditor && <LiveEditor />}
-        <LiveError />
-      </LiveProvider>
+      <Container>
+        <LiveProvider code={code} scope={Object.assign({}, scope, defaultScope)}>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            margin: '16px 0',
+            }}
+          >
+            <Header size="large" style={{ marginBottom: '0' }}>{title}</Header>
+            <Button onClick={this.toggleEditor} size="tiny">
+              Edit
+            </Button>
+          </div>
+          {showEditor && <LiveEditor />}
+          <LivePreview />
+          <LiveError />
+        </LiveProvider>
+      </Container>
     );
   }
 }
