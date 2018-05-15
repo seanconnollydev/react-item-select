@@ -1,3 +1,5 @@
+[![NPM](https://img.shields.io/npm/v/react-item-select.svg)](https://www.npmjs.com/package/react-item-select)
+
 # react-item-select
 A React component that takes away the pain of managing item selection state in tables and lists
 
