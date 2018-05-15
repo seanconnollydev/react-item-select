@@ -77,3 +77,16 @@ const MyTable = ({ handleSelect, isItemSelected }) => (
 
 export default withSelections(MyTable);
 ```
+
+## Options
+| Property        | Description           | Type  |
+| ------------- |-------------| -----|
+| areAllIndeterminate(items) | `true` if at least one item is selected not all `items` are selected | function
+| areAllSelected(items) | `true` if all `items` are selected, otherwise `false`      |    function |
+| areAnySelected      | `true` if at least one item in the list is selected, otherwise `false` | boolean
+| handleClearAll()      | Deselects all items | function
+| handleSelect(id) | Toggles an item (e.g. when a user clicks a checkbox)      |    function |
+| handleSelectAll(items) | Toggles all `items`      |    function |
+| isItemSelected(item.id) | `true` if the `item` is selected, otherwise `false`      |    function |
+| selectedCount      | The number of items selected | number
+| selections | Keyed object where the key is a specified `id` and the value is `true` if the item is in the list      |    object |
