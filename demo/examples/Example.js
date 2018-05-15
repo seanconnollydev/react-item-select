@@ -31,14 +31,8 @@ class Example extends React.Component {
       <div>
         <LiveProvider code={code} scope={Object.assign({}, scope, defaultScope)}>
           <Container textAlign="center">
-            <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            margin: '16px 0',
-            }}
-            >
-              <Header size="large" style={{ marginBottom: '0' }}>{title}</Header>
+            <div className="header-container">
+              <Header size="large">{title}</Header>
               <Button onClick={this.toggleEditor} size="tiny">
               Edit
               </Button>
@@ -48,6 +42,19 @@ class Example extends React.Component {
           {showEditor && <LiveEditor />}
           <LiveError />
         </LiveProvider>
+        <style jsx>{`
+          div.header-container {
+            display: flex;
+            align-tems: center;
+            justify-content: space-between;
+            margin: 16px 0;
+          }
+
+          div.header-container > :global(.header) {
+            margin-bottom: 0;
+          }
+        `}
+        </style>
       </div>
     );
   }
