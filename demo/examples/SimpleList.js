@@ -1,6 +1,6 @@
-import { List } from 'semantic-ui-react';
+import { List, Segment } from 'semantic-ui-react';
 
-const scope = { List };
+const scope = { List, Segment };
 
 const code = `
 withSelections((props) => {
@@ -9,8 +9,8 @@ withSelections((props) => {
   const items = [{id: 1, name: 'One'}, {id: 2, name: 'Two'}, {id: 3, name: 'Three'}];
 
   return (
-    <div>
-      <List selection>
+    <Segment inverted>
+      <List selection inverted divided>
         {items.map(item => (
           <List.Item
             key={item.id}
@@ -20,7 +20,7 @@ withSelections((props) => {
         </List.Item>
         ))}
       </List>
-    </div>
+    </Segment>
   );
 });
 `;

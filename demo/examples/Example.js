@@ -28,7 +28,7 @@ class Example extends React.Component {
     const { showEditor } = this.state;
 
     return (
-      <div>
+      <div className="example">
         <LiveProvider code={code} scope={Object.assign({}, scope, defaultScope)}>
           <Container textAlign="center">
             <div className="header-container">
@@ -43,11 +43,15 @@ class Example extends React.Component {
           <LiveError />
         </LiveProvider>
         <style jsx>{`
+          div.example {
+            margin-bottom: 48px;
+          }
+
           div.header-container {
             display: flex;
             align-tems: center;
             justify-content: space-between;
-            margin: 16px 0;
+            margin-bottom: 16px;
           }
 
           div.header-container > :global(.header) {
