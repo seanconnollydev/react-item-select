@@ -1,7 +1,7 @@
 # react-item-select
 A React component that takes away the pain of managing item selection state in tables and lists
 
-https://react-item-select.now.sh/ (Demo)
+https://react-item-select.now.sh
 
 ## Install
 ```
