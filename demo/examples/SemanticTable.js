@@ -22,6 +22,7 @@ withSelections((props) => {
   return (
     <div>
       <Segment textAlign="left" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+        {!areAnySelected && <span>Select items in the table below</span>}
         <div style={{ visibility: areAnySelected ? 'visible' : 'hidden' }}>
           <span style={{marginRight: '8px'}}>{selectedCount} selected</span>
           <Button basic onClick={handleClearAll}>Clear</Button>

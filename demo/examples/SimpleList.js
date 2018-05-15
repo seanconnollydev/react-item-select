@@ -1,3 +1,7 @@
+import { List } from 'semantic-ui-react';
+
+const scope = { List };
+
 const code = `
 withSelections((props) => {
   const { handleSelect, isItemSelected } = props;
@@ -6,19 +10,19 @@ withSelections((props) => {
 
   return (
     <div>
-      <ul>
+      <List selection>
         {items.map(item => (
-          <li
+          <List.Item
             key={item.id}
             onClick={() => handleSelect(item.id)}
-            style={{ cursor: 'pointer', fontWeight: isItemSelected(item.id) ? 'bold' : 'normal' }}
+            active={isItemSelected(item.id)}
           >{item.name}
-          </li>
+        </List.Item>
         ))}
-      </ul>
+      </List>
     </div>
   );
 });
 `;
 
-export default { code };
+export default { code, scope };
