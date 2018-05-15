@@ -31,15 +31,15 @@ class Example extends React.Component {
       <div className="example">
         <LiveProvider code={code} scope={Object.assign({}, scope, defaultScope)}>
           <Container textAlign="center">
-            <div className="header-container">
+            <div className="header-wrapper">
               <Header size="large">{title}</Header>
-              <Button onClick={this.toggleEditor} size="tiny">
+              <Button onClick={this.toggleEditor} size="tiny" basic color="blue">
               Edit
               </Button>
             </div>
             <LivePreview />
           </Container>
-          {showEditor && <LiveEditor />}
+          {showEditor && <div className="editor"><LiveEditor /></div>}
           <LiveError />
         </LiveProvider>
         <style jsx>{`
@@ -47,15 +47,19 @@ class Example extends React.Component {
             margin-bottom: 48px;
           }
 
-          div.header-container {
+          div.header-wrapper {
             display: flex;
             align-tems: center;
             justify-content: space-between;
             margin-bottom: 16px;
           }
 
-          div.header-container > :global(.header) {
+          div.header-wrapper > :global(.header) {
             margin-bottom: 0;
+          }
+
+          div.editor {
+            margin: 16px 0;
           }
         `}
         </style>
