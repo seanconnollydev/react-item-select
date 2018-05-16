@@ -1,2 +1,5 @@
 node_modules/
 .next/
+out/*
+!/out/.gitignore
+!/out/now.json

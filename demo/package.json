@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "export": "next build && next export",
+    "start": "next start",
+    "deploy": "npm run export && cd out && now --local-config=../now.json && cd ..",
+    "alias": "now alias"
   },
   "repository": {
     "type": "git",

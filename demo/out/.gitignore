@@ -1,0 +1,2 @@
+# Because now can't handle large files in free tier
+**/*.js.map

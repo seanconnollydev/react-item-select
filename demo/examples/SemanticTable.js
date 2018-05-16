@@ -1,5 +1,5 @@
 import _range from 'lodash/range';
-import faker from 'faker';
+import faker from 'faker/locale/en';
 import { Button, Checkbox, Segment, Table } from 'semantic-ui-react';
 
 const members = _range(0, 15).map(i => ({
