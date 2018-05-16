@@ -39,7 +39,7 @@ const MyTable = ({ handleSelect, isItemSelected }) => (
   <table>
     <tbody>
       {items.map(item => (
-        <tr>
+        <tr key={item.id}>
           <td>
             <input name="first" type="checkbox" checked={isItemSelected(item.id)} onChange={handleSelect(item.id)} />
           </td>
@@ -66,7 +66,7 @@ const MyTable = ({ handleSelect, isItemSelected }) => (
   <Table>
     <Table.Body>
       {items.map(item => (
-        <Table.Row>
+        <Table.Row key={item.id}>
           <Table.Cell>
             <Checkbox checked={isItemSelected(item.id)} onChange={handleSelect(item.id)} />
           </Table.Cell>
