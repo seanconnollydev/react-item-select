@@ -10,6 +10,14 @@ const Index = () => (
     <Head>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" />
       <style>{'body { background-color: #f8f8f8; }'}</style>
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+          ga('create', 'UA-119318492-1', 'auto');
+          ga('send', 'pageview');`,
+        }}
+      />
+      <script async src="https://www.google-analytics.com/analytics.js" />
     </Head>
     <Container fluid>
       <Segment inverted vertical color="blue" padded="very" textAlign="center" className="index-segment">
