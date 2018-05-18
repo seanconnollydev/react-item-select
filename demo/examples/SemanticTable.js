@@ -16,12 +16,25 @@ const scope = {
 const code = `
 withSelections((props) => {
   const {
-      areAllIndeterminate, areAllSelected, areAnySelected, selectedCount, handleClearAll, handleSelect, handleSelectAll, isItemSelected,
-    } = props;
+    areAllIndeterminate,
+    areAllSelected,
+    areAnySelected,
+    selectedCount,
+    handleClearAll,
+    handleSelect,
+    handleSelectAll,
+    isItemSelected,
+  } = props;
+
+  const segmentStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  };
 
   return (
     <div>
-      <Segment textAlign="left" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+      <Segment textAlign="left" style={segmentStyle}>
         {!areAnySelected && <span>Select items in the table below</span>}
         <div style={{ visibility: areAnySelected ? 'visible' : 'hidden' }}>
           <span style={{marginRight: '8px'}}>{selectedCount} selected</span>
@@ -35,7 +48,11 @@ withSelections((props) => {
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>
-              <Checkbox checked={areAllSelected(members)} indeterminate={areAllIndeterminate(members)} onChange={() => handleSelectAll(members)} />
+              <Checkbox
+                checked={areAllSelected(members)}
+                indeterminate={areAllIndeterminate(members)}
+                onChange={() => handleSelectAll(members)}
+              />
             </Table.HeaderCell>
             <Table.HeaderCell>USERNAME</Table.HeaderCell>
             <Table.HeaderCell>FIRST</Table.HeaderCell>
@@ -46,7 +63,10 @@ withSelections((props) => {
           {members.map(member => (
             <Table.Row key={member.id}>
               <Table.Cell>
-                <Checkbox checked={isItemSelected(member.id)} onChange={() => handleSelect(member.id)} />
+                <Checkbox
+                  checked={isItemSelected(member.id)}
+                  onChange={() => handleSelect(member.id)}
+                />
               </Table.Cell>
               <Table.Cell>{member.username}</Table.Cell>
               <Table.Cell>{member.first}</Table.Cell>

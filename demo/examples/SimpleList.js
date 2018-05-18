@@ -6,7 +6,11 @@ const code = `
 withSelections((props) => {
   const { handleSelect, isItemSelected } = props;
 
-  const items = [{id: 1, name: 'One'}, {id: 2, name: 'Two'}, {id: 3, name: 'Three'}];
+  const items = [
+    { id: 1, name: 'One'},
+    { id: 2, name: 'Two'},
+    { id: 3, name: 'Three'},
+  ];
 
   return (
     <Segment inverted>

@@ -38,9 +38,9 @@ class Example extends React.Component {
               </Button>
             </div>
             <LivePreview />
+            {showEditor && <div className="editor"><LiveEditor /></div>}
+            <LiveError />
           </Container>
-          {showEditor && <div className="editor"><LiveEditor /></div>}
-          <LiveError />
         </LiveProvider>
         <style jsx>{`
           div.example {
@@ -60,6 +60,7 @@ class Example extends React.Component {
 
           div.editor {
             margin: 16px 0;
+            overflow-x: auto;
           }
         `}
         </style>
